@@ -1,0 +1,87 @@
+{{!-- profile page --}}
+<div class="profile-window">
+
+    <div>
+        <h2 class="userHeader">{{name}}'s Kitchen</h2>
+    </div>
+
+    {{!-- share recipe data input --}}
+    <section>
+
+        <h2 id="recipe-start">Share a New Recipe</h2>
+
+        <div class="recipe-Creator">
+
+           {{!-- recipe name + prep time --}}
+            <div class="create1">
+                <label for="recipeName">Recipe Name:</label>
+                <input type="text" id="recipeName" name="recipeName" required>
+
+                <label for="prepTime">Prep Time:</label>
+                <input type="text" id="prepTime" name="prepTime" required>
+
+                 {{!-- category drop down --}}
+                <label for="recipeCategory">Category:</label>
+                <select id="recipeCategory" name="recipeCategory" required>
+
+                    <option value="1">Breakfast</option>
+                    <option value="2">Brunch</option>
+                    <option value="3">Lunch</option>
+                    <option value="4">Dinner</option>
+                    <option value="5">Appetizer</option>
+                    <option value="6">Side Dishes</option>
+                    <option value="7">Dessert</option>
+                    <option value="8">Snacks</option>
+    
+                </select>
+            </div>
+
+            {{!-- recipe details --}}
+            <div class="create2">
+
+                <label for="recipeDescription">Description:</label>
+                <textarea id="recipeDescription" name="recipeDescription" required></textarea>
+
+                <label for="recipeIngredients">Ingredients:</label>
+                <textarea id="recipeIngredients" name="recipeIngredients" required></textarea>
+
+                <label for="instructions">Instructions:</label>
+                <textarea id="instructions" name="instructions" required></textarea>
+
+            </div>
+
+            {{!-- cloudinary photo upload --}}
+            <div class="create3">
+                <button id="upload_widget" class="cloudinary-button">Upload files</button>
+
+            </div>
+
+            {{!-- submit button --}}
+            <div class="create4">
+                <button type="submit" id="shareRecipeBtn" class="btn btn-primary">Share Recipe</button>
+            </div>
+        </div>
+
+        {{!-- display of own recipes --}}
+        <h2>My Recipes</h2>
+        {{#each recipes}}
+        <div class="recipe-card">
+            <div>
+                <h2>
+                    <a href="/recipes/{{id}}">{{name}}</a>
+                </h2>
+            </div>
+            <div>
+                <p>
+                    {{description}}
+                </p>
+            </div>
+
+            {{!-- delete button --}}
+            <button class="btn" id="delete-recipe" data-id="{{id}}">Delete Recipe</button>
+        </div>
+        {{/each}}
+    </section>
+</div>
+
+<script src="/js/dashboard.js"></script>

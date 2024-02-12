@@ -1,0 +1,20 @@
+{{!-- Individulal user handle bars --}}
+{{!-- Will display all recipes associated with that user and links to the individual recipes --}}
+<div class="recipe-window">
+    <h2 class="userHeader">{{name}}'s Kitchen</h2>
+    {{#each recipes}}
+    <div class="recipe-card">
+        <div>
+            <h2>
+                <a href="/posts/{{id}}">{{name}}</a>
+            </h2>
+        </div>
+        <div>
+            <p>
+                {{description}}
+            </p>
+        </div>
+    </div>
+    {{/each}}
+
+</div>

@@ -1,0 +1,49 @@
+<!-- Main Page Handlebar Template-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Tech Blog</title>
+    <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chivo&family=Lexend:wght@500&family=Roboto&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <nav class="nav-list">
+                <a href="/" id="home-btn">Home</a>
+                {{#if logged_in}}
+                <a href="/dashboard" id="profile-in">Profile</a>
+                {{/if}}
+            </nav>
+            {{#if logged_in}}
+            <nav class="nav-list logout">
+                <a id="logout">Logout</a>
+            </nav>
+            {{else}}
+            <nav class="nav-list login">
+                <a href="/login">Login</a>
+            </nav>
+            {{/if}}
+        </nav>
+    </header>
+
+    <main class="main-container">
+        {{{body}}}
+    </main>
+
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
+
+</body>
+
+</html>

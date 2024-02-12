@@ -1,0 +1,11 @@
+<!--Homepage Handlebar-->
+<div class="recipe-window">
+    {{#each posts}}
+    <div class="recipe-card">
+        <div>
+            <h3><a href="/posts/{{id}}">{{name}}</a></h3>
+            <p>Created by <a href="/users/{{user.id}}">{{user.name}}</a></p>
+        </div>
+    </div>
+    {{/each}}
+</div>

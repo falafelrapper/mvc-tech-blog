@@ -1,0 +1,361 @@
+/* Main Style Sheet */
+
+/* universal styling */
+* {
+    width: auto;
+    height: fit-content;
+}
+
+/* root styling */
+
+:root {
+    --kyogre: #194E8A;
+    --miku: #4ECDC4;
+    --latte: #d6c898;
+    --espresso: #685927;
+    --latias: #FF6B6B;
+    --black: #000000;
+    --smoke: #807f7f80;
+    --deepsmoke: #807f7fbb;
+    --lugia: #dddddd;
+}
+
+body {
+    background: linear-gradient(var(--latte) 0, var(--latte) 25%, var(--latias));
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+img {
+    max-width: 500px;
+    max-height: 500px;
+    border-radius: 10px;
+}
+
+.bold-font {
+    font-weight: bold;
+}
+
+/* All nav bar styles */
+nav {
+    display: flex;
+    background-color: var(--black);
+    color: var(--miku);
+    height: 50px;
+    padding: 0;
+    border-radius: 0 0 30px 30px;
+    justify-content: space-between;
+    font-family: 'Chivo', sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.nav-list {
+    display: flex;
+}
+
+.nav-list a {
+    color: var(--miku);
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    padding: 13px;
+    border-radius: 8px;
+}
+
+.nav-list a:hover {
+    color: var(--kyogre);
+    background-color: var(--miku);
+}
+
+#home-btn {
+    border-radius: 0 0 0 30px;
+    ;
+}
+
+#recipe-in {
+    border-radius: 0;
+}
+
+#recipe-out {
+    border-radius: 0 8px 8px 0;
+}
+
+#profile-in {
+    border-radius: 0 8px 8px 0;
+}
+
+.login a,
+.logout a {
+    border-radius: 8px 0 30px 8px;
+    ;
+}
+
+#logout {
+    cursor: pointer;
+}
+
+
+/* main container where our body goes */
+.main-container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* login/signup styles */
+
+.login-box {
+    background-color: var(--smoke);
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    display: block;
+}
+
+.login-window,
+.signup-window {
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+
+form .form-group {
+    display: flex;
+    flex-direction: column;
+    margin: 0.625rem auto;
+    padding: 0;
+}
+
+form .login-form,
+form .signup-form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+form input,
+form select,
+div input,
+div select {
+    text-align: center;
+    margin: 0.625rem 0 0.25rem 0.3rem;
+    min-width: 1%;
+    max-width: 10%;
+    width: 10%;
+}
+
+form textarea,
+div textarea {
+    margin: 0.625rem 0 0.25rem 0.3rem;
+}
+
+form label,
+form .form-label,
+div label {
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: 0.625rem 0 0.25rem 0.3rem;
+}
+
+form .form-input {
+    padding: 0.75rem;
+    color: #1a1a1a;
+    background-color: #ffffff;
+    margin: 0.625rem 0;
+    font-size: 1.2rem;
+    border: 1px solid #484848;
+    border-radius: 0.3rem;
+    min-width: none;
+    max-width: 100%;
+    width: 92%;
+}
+
+
+form .form-input.form-input-squared {
+    border-radius: 0;
+}
+
+/* universal button style */
+.btn {
+    text-align: center;
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    margin: 0;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Roboto';
+    border-radius: 0.3rem;
+    border: 1px solid transparent;
+    outline: none;
+    color: var(--lugia);
+    background-color: var(--kyogre);
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--miku);
+    color: var(--kyogre);
+}
+
+/* homepage styles */
+
+.welcome-background {
+    width: 100%;
+    height: 100vh;
+}
+
+.welcome-window {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    text-align: center;
+}
+
+.welcome-card {
+    display: block;
+    background: var(--smoke);
+    border: solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.breaking-bread {
+    display: block;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Lexend';
+    background-color: var(--deepsmoke);
+    text-shadow:
+        -1px -1px 0 var(--lugia),
+        1px -1px 0 var(--lugia),
+        -1px 1px 0 var(--lugia),
+        1px 1px 0 var(--lugia);
+}
+
+/* recipe styles */
+
+.recipe-window,
+.profile-window {
+    width: 80%;
+    margin-top: 50px;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+
+.recipe-Creator {
+    background: var(--lugia);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 20px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: black;
+    margin: 10px auto;
+    padding-bottom: 10px;
+    width: 75%;
+}
+
+.recipe-Creator div {
+    justify-content: center;
+}
+
+.create1,
+.create2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+    width: 100%;
+}
+
+.create3,
+.create4 {
+    display: block;
+    width: 100%;
+}
+
+#upload_widget,
+#shareRecipeBtn {
+    display: block;
+    margin: 1rem auto;
+}
+
+.recipe-descrip {
+    font-size: 20px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: black;
+    background: linear-gradient(var(--lugia) 0, var(--deepsmoke));
+    margin: 10px auto;
+    padding-bottom: 10px;
+    width: 40%;
+}
+
+.recipe-card {
+    font-size: 20px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: black;
+    background: var(--smoke);
+    margin: 10px;
+    padding-bottom: 10px;
+}
+
+#recipeDescription,
+#recipeIngredients,
+#instructions {
+    min-width: 1%;
+    max-width: 15%;
+    width: 15%;
+    min-height: 6rem;
+}
+
+.recipe-card a {
+    text-decoration: none;
+}
+
+/* Profile Styles */
+
+.profile-window {
+    /* display: block; */
+    text-align: center;
+    justify-content: center;
+}
+
+.userHeader,
+#recipe-start {
+    text-align: center;
+}
