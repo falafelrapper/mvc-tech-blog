@@ -70,10 +70,10 @@ header {
 }
 
 .techblog{
-    top: 0;
-    margin: auto;
-    position: fixed;
+    margin: -60px auto 0;
     text-align: center;
+    color: var(--miku);
+    font-family: 'Roboto', sans-serif;
 }
 
 .nav-list a:hover {
