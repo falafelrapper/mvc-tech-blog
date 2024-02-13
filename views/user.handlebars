@@ -3,18 +3,14 @@
 <div class="post-window">
     <h2 class="userHeader">{{name}}'s Profile</h2>
     {{#each posts}}
-   <div class="post-card">
+    <div class="post-card">
         <div>
             <div class="card-header">
                 <h3 id="post-name"><a href="/posts/{{id}}">{{name}}</a></h3>
-                <p id="post-user">Created by <a href="/users/{{user.id}}">{{user.name}}</a></p>
+                <p id="post-user">Created by {{user.name}}</p>
             </div>
-
-            <p>
-                {{description}}
-            </p>
+            <p id="post-text">{{description}}</p>
         </div>
     </div>
     {{/each}}
-
 </div>

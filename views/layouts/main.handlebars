@@ -19,9 +19,11 @@
     <header>
         <nav>
             <nav class="nav-list">
-                <a href="/" id="home-btn">Home</a>
                 {{#if logged_in}}
+                <a href="/" id="home-btn-in">Home</a>
                 <a href="/dashboard" id="profile-in">Dashboard</a>
+                {{else}}
+                <a href="/" id="home-btn-out">Home</a>
                 {{/if}}
             </nav>
             {{#if logged_in}}

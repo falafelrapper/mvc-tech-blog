@@ -8,9 +8,9 @@
     {{!-- share recipe data input --}}
     <section>
 
-        <h2 id="recipe-start">Create a new post!</h2>
+        <h2 id="post-start">Create a new post!</h2>
 
-        <a class="btn btn-primary" href="create-post">Create Post!</a>
+        <a class="btn createpostbtn" href="create-post">Create Post!</a>
 
         {{!-- display of own recipes --}}
         <h2>My Posts</h2>
@@ -24,7 +24,7 @@
                         <p id="post-user">Created by <a href="/users/{{user.id}}">{{user.name}}</a></p>
                     </div>
 
-                    <p>
+                    <p id="post-text">
                         {{description}}
                     </p>
                 </div>

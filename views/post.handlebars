@@ -1,6 +1,7 @@
 {{!-- recipes page --}}
 
 {{!-- Recipe page image will only show up if there is an associated image --}}
+
 <div class="post-window">
      <div class="post-card">
         <div>
@@ -9,7 +10,7 @@
                 <p id="post-user">Created by <a href="/users/{{user.id}}">{{user.name}}</a></p>
             </div>
 
-            <p>
+            <p id="post-text">
                 {{description}}
             </p>
         </div>

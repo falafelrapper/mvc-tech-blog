@@ -10,6 +10,7 @@
 
 :root {
     --kyogre: #194E8A;
+    --deepsea: #4b8eda;
     --miku: #4ECDC4;
     --latte: #d6c898;
     --espresso: #685927;
@@ -18,10 +19,13 @@
     --smoke: #807f7f80;
     --deepsmoke: #807f7fbb;
     --lugia: #dddddd;
+    --jade: #640377;
+    --text: #ec98e1;
+    --emerald: #19bb98;
 }
 
 body {
-    background: linear-gradient(var(--latte) 0, var(--latte) 25%, var(--latias));
+    background: linear-gradient(var(--kyogre) 0, var(--kyogre) 20%, var(--emerald) 60%, var(--jade) 90%);
     background-size: 100vw 100vh;
     background-attachment: fixed;
     margin: 0;
@@ -75,8 +79,13 @@ header {
     background-color: var(--miku);
 }
 
-#home-btn {
+#home-btn-in {
     border-radius: 0 0 0 30px;
+    ;
+}
+
+#home-btn-out {
+    border-radius: 0 8px 8px 30px;
     ;
 }
 
@@ -110,6 +119,11 @@ header {
     border-radius: 10px;
     padding: 10px;
     display: block;
+}
+
+#login-link,
+#signup-link{
+    color: var(--latias);
 }
 
 .login-window,
@@ -199,9 +213,14 @@ form .form-input.form-input-squared {
     border: 1px solid transparent;
     outline: none;
     color: var(--lugia);
-    background-color: var(--kyogre);
+    background-color: var(--deepsea);
     transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
     cursor: pointer;
+}
+
+.createpostbtn{
+    font-size: 1.5rem;
+    border: solid var(--black) 2px;
 }
 
 .btn:hover {
@@ -247,6 +266,10 @@ form .form-input.form-input-squared {
     margin-top: 50px;
     flex-direction: row;
     justify-content: center;
+    /* text-align: center; */
+}
+
+.dashboard-window{
     text-align: center;
 }
 
@@ -275,7 +298,6 @@ form .form-input.form-input-squared {
     flex-direction: row;
     align-items: center;
     margin: auto;
-    justify-content: center;
     width: 100%;
 }
 
@@ -299,7 +321,7 @@ form .form-input.form-input-squared {
     margin-right: 10px;
 }
 
-.post-descrip {
+/* .post-descrip {
     font-size: 20px;
     border-radius: 10px;
     border-style: solid;
@@ -308,13 +330,17 @@ form .form-input.form-input-squared {
     margin: 10px auto;
     padding-bottom: 10px;
     width: 40%;
-}
+} */
 
 .card-header {
     display: flex;
     justify-content: space-between;
-    background-color: var(--kyogre);
+    background-color: var(--deepsea);
     border-radius: 7px 7px 0 0;
+}
+
+#post-text{
+    margin: auto 15px;
 }
 
 .post-card {
@@ -327,6 +353,7 @@ form .form-input.form-input-squared {
     padding-bottom: 10px;
 }
 
+
 #postDescription,
 #instructions {
     min-width: 1%;
@@ -337,7 +364,7 @@ form .form-input.form-input-squared {
 
 .post-card a {
     text-decoration: none;
-    color: var(--miku);
+    color: var(--text);
 }
 
 /* Profile Styles */

@@ -1,41 +1,22 @@
 [
   {
-    "name": "Popcorn",
-    "description": "Tasty and easy",
-    "user_id": 2
-  },
-  {
-    "name": "Kidney Bean Salad",
-    "description": "A delicious blend of ",
-    "user_id": 3
-  },
-  {
-    "name": "Amuro's Glass of Milk",
-    "description": "A delicious glass of milk like the one Amuro Ray drank one time.",
-    "user_id": 4
-  },
-  {
-    "name": "Bright Noa's Burger",
-    "description": "A vending machine burger eaten by Captain Bright Noa.",
-    "user_id": 4
-  },
-  { "name": "Soon Tofu",
-    "description": "A warm rich and tangy soup",
-    "user_id": 2
-  },
-  {
-    "name": "Jujeh Kabab",
-    "description": "Tangy and fulfilling",
+    "name": "Javascript 101",
+    "description": "Javascript is an interesting way on being able to get your foot in the door with functionality added to your web applications. This can be things like buttons, clicks, forms, etc.",
     "user_id": 1
   },
   {
-    "name": "Pancakes",
-    "description": "Warm adn fluffy",
+    "name": "GPUs: Why are they so expensive",
+    "description": "When building a nice gaming PC, one of the most important parts of your configuration will always be your graphics card. Because of this, it is easy to set this part up super high, especially when you want graphics that push boundaries",
+    "user_id": 2
+  },
+  {
+    "name": "Mechanical Keyboards vs Rubber Dome Keyboards",
+    "description": "You should look into getting a mechanical keyboard if you know that you will be working on a computer all day and all night, as there are many added benefits to it. However, some of us are still nostalgic for those thunky clicks you get from mashing an old school keyboard, like ones that come from an older Mac.",
     "user_id": 3
   },
   {
-    "name": "Chocolate Mousse",
-    "description": "Rich and chocolatey",
-    "user_id": 1
+    "name": "Should I get an AMD or Intel CPU?",
+    "description": "Depending on your price to performance, alot of things go into picking your CPU. If you are looking for the best of the best, I will always recommend an Intel processor. However, if you want something that still does a great job at an insanely good value, definitely check out AMD.",
+    "user_id": 4
   }
 ]
