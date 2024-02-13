@@ -20,7 +20,7 @@ router.get('/', async (req, res) => {
 
         res.render('homepage', {
             posts,
-            logged_in: req.session.logged_in 
+            logged_in: req.session.logged_in
         });
     } catch (err) {
         res.status(500).json(err);
@@ -36,6 +36,13 @@ router.get('/posts/:id', async (req, res) => {
                     model: User,
                     attributes: ['name', 'id'],
                 },
+                {
+                    model: Comment,
+                    include: {
+                        model: User,
+                        attributes: ['name', 'id']
+                    }
+                },
             ],
         });
 
@@ -43,7 +50,7 @@ router.get('/posts/:id', async (req, res) => {
 
         res.render('post', {
             ...post,
-            logged_in: req.session.logged_in 
+            logged_in: req.session.logged_in
         });
     } catch (err) {
         res.status(500).json(err);
@@ -58,7 +65,11 @@ router.get('/users/:id', async (req, res) => {
             attributes: { exclude: ['password'] },
             include: [
                 {
-                    model: Post
+                    model: Post,
+                    include: {
+                        model: User,
+                        attributes: ['name', 'id']
+                    }
                 }
             ],
         });
@@ -67,7 +78,7 @@ router.get('/users/:id', async (req, res) => {
 
         res.render('user', {
             ...user,
-            logged_in: req.session.logged_in 
+            logged_in: req.session.logged_in
         });
     } catch (err) {
         res.status(500).json(err);
@@ -80,7 +91,13 @@ router.get('/dashboard', withAuth, async (req, res) => {
     try {
         const userData = await User.findByPk(req.session.user_id, {
             attributes: { exclude: ['password'] },
-            include: [{ model: Post }]
+            include: [{
+                model: Post,
+                include: {
+                    model: User,
+                    attributes: ['name', 'id']
+                }
+            },]
         });
 
         const user = userData.get({ plain: true });

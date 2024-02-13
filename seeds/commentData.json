@@ -1,7 +1,37 @@
 [
     {
         "comment": "Good to know!",
+        "user_id": 5,
+        "post_id": 1
+    },
+    {
+        "comment": "God, I wish I could finally afford an RTX card",
+        "user_id": 3,
+        "post_id": 2
+    },
+    {
+        "comment": "Loving my new Intel Core i7, definitely processes applications a lot more efficiently!",
         "user_id": 1,
+        "post_id": 4
+    },
+    {
+        "comment": "Yeah, that's cool, but show us your keyboard collection lol",
+        "user_id": 5,
+        "post_id": 3
+    },
+    {
+        "comment": "Just started learning it, thanks for the recommendation!",
+        "user_id": 2,
+        "post_id": 1
+    },
+    {
+        "comment": "okay pc masterrace guy",
+        "user_id": 5,
+        "post_id": 2
+    },
+    {
+        "comment": "I'd rather learn python instead",
+        "user_id": 4,
         "post_id": 1
     }
 ]

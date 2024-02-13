@@ -1,7 +1,7 @@
 {{!-- post page --}}
 
 <div class="post-window">
-     <div class="post-card">
+    <div class="post-card">
         <div>
             <div class="card-header">
                 <h3 id="post-name">{{name}}</h3>
@@ -13,13 +13,47 @@
             </p>
         </div>
     </div>
+    <div class="comments">
+
+        {{#if logged_in}}
+        <button class="btn" id="start-comment">Add Comment</button>
+
+        <div class="comment-Creator hidden">
+
+            <div class="create2">
+
+                <label for="postComment">Comment:</label>
+                <textarea id="postComment" name="postComment" required></textarea>
+
+            </div>
+
+            {{!-- submit button --}}
+            <div class="create4">
+                <button type="submit" id="create-comment" class="btn">Submit Comment</button>
+            </div>
+        </div>
+        {{/if}}
+
+        <h2 id="comments">Comments:</h2>
+        {{#if comments}}
+        {{else}}
+        <h2>It's looking a little lonely here, why not post a comment?</h2>
+        {{/if}}
+    </div>
+
     {{#each comments}}
     <div class="post-card">
+        <div class="card-header">
+            <p id="comment-user">Comment by <a href="/users/{{user.id}}">{{user.name}}</a></p>
+        </div>
         <div>
-            <p id="post-text">
+            <p id="comment-text">
                 {{comment}}
             </p>
         </div>
     </div>
     {{/each}}
+
 </div>
+
+<script src="/js/createcomment.js"></script>
