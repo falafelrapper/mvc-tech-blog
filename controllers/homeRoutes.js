@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Post } = require('../models');
+const { User, Post, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 // route for the hompage which will display the homepage handlebars
@@ -19,31 +19,6 @@ router.get('/', async (req, res) => {
         const posts = postData.map((post) => post.get({ plain: true }));
 
         res.render('homepage', {
-            posts,
-            logged_in: req.session.logged_in 
-        });
-    } catch (err) {
-        res.status(500).json(err);
-    }
-});
-
-// Route for the recipes page
-// Returns recipes with thier associated Users with names and ids, and category
-router.get('/posts', async (req, res) => {
-    try {
-        const postData = await Post.findAll({
-            include: [
-                {
-                    model: User,
-                    attributes: ['name', 'id'],
-                },
-            ],
-        });
-
-        // map is needed to 
-        const posts = postData.map((post) => post.get({ plain: true }));
-
-        res.render('posts', {
             posts,
             logged_in: req.session.logged_in 
         });
@@ -101,8 +76,6 @@ router.get('/users/:id', async (req, res) => {
 
 // Route for the profile of the currently logged in user
 // Requires the user to be logged in to view, withAuth will redirect the user to the login otherwise
-// Returns the associated recipes only since the information displayed on this page is limited
-// Uses session id to find the currently logged in user
 router.get('/dashboard', withAuth, async (req, res) => {
     try {
         const userData = await User.findByPk(req.session.user_id, {

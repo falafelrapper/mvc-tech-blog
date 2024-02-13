@@ -1,6 +1,4 @@
-{{!-- recipes page --}}
-
-{{!-- Recipe page image will only show up if there is an associated image --}}
+{{!-- post page --}}
 
 <div class="post-window">
      <div class="post-card">
@@ -15,4 +13,13 @@
             </p>
         </div>
     </div>
+    {{#each comments}}
+    <div class="post-card">
+        <div>
+            <p id="post-text">
+                {{comment}}
+            </p>
+        </div>
+    </div>
+    {{/each}}
 </div>

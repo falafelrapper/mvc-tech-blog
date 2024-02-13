@@ -32,12 +32,6 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-img {
-    max-width: 500px;
-    max-height: 500px;
-    border-radius: 10px;
-}
-
 .bold-font {
     font-weight: bold;
 }

@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { User } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-// User route for creating a new user via the signup page
+
 router.post('/', async (req, res) => {
     try {
         const newUser = await User.create({
@@ -18,7 +18,7 @@ router.post('/', async (req, res) => {
     }
 });
 
-// User route for logging in a user via the login page
+
 router.post('/login', async (req, res) => {
     try {
         const userData = await User.findOne({ where: { email: req.body.email } });
@@ -45,8 +45,7 @@ router.post('/login', async (req, res) => {
     }
 });
 
-// User route to logout a user when the logout button is pushed
-// Destroys the session so that the profile can no longer be viewed
+
 router.post('/logout', (req, res) => {
     if (req.session.logged_in) {
         req.session.destroy(() => {
