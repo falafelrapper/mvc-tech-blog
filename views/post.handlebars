@@ -1,17 +1,17 @@
 {{!-- recipes page --}}
 
 {{!-- Recipe page image will only show up if there is an associated image --}}
-<div class="recipe-window">
-    <div class="recipe-card">
-        <h1>{{name}}</h1>
+<div class="post-window">
+     <div class="post-card">
         <div>
-            <div>
-                <h2><span class="bold-font">Created by</span> {{user.name}}</h2>
+            <div class="card-header">
+                <h3 id="post-name">{{name}}</h3>
+                <p id="post-user">Created by <a href="/users/{{user.id}}">{{user.name}}</a></p>
             </div>
 
-            <div class="recipe-descrip">
-                <p>{{description}}</p>
-            </div>
+            <p>
+                {{description}}
+            </p>
         </div>
     </div>
 </div>

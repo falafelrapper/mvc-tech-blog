@@ -2,48 +2,40 @@
   {
     "name": "Popcorn",
     "description": "Tasty and easy",
-    "user_id": 2,
-    "category_id": 2
+    "user_id": 2
   },
   {
     "name": "Kidney Bean Salad",
     "description": "A delicious blend of ",
-    "user_id": 3,
-    "category_id": 3
+    "user_id": 3
   },
   {
     "name": "Amuro's Glass of Milk",
     "description": "A delicious glass of milk like the one Amuro Ray drank one time.",
-    "user_id": 4,
-    "category_id": 1
+    "user_id": 4
   },
   {
     "name": "Bright Noa's Burger",
     "description": "A vending machine burger eaten by Captain Bright Noa.",
-    "user_id": 4,
-    "category_id": 3
+    "user_id": 4
   },
   { "name": "Soon Tofu",
     "description": "A warm rich and tangy soup",
-    "user_id": 3,
-    "category_id": 3
+    "user_id": 2
   },
   {
     "name": "Jujeh Kabab",
     "description": "Tangy and fulfilling",
-    "user_id": 3,
-    "category_id": 4
+    "user_id": 1
   },
   {
     "name": "Pancakes",
     "description": "Warm adn fluffy",
-    "user_id": 3,
-    "category_id": 1
+    "user_id": 3
   },
   {
     "name": "Chocolate Mousse",
     "description": "Rich and chocolatey",
-    "user_id": 3,
-    "category_id": 7
+    "user_id": 1
   }
 ]

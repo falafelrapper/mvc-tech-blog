@@ -17,7 +17,7 @@ router.post('/', withAuth, async (req, res) => {
     }
 });
 
-// Recipe route for deleting a recipe from the profile page
+// Recipe route for deleting a post from the profile page
 // The id is actually provided by the delete button on the profile page
 router.delete('/:id', withAuth, async (req, res) => {
     try {

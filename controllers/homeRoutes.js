@@ -7,22 +7,6 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
     try {
-        // const recipeData = await Recipe.findAll({
-        //     include: [
-        //         {
-        //             model: User,
-        //             attributes: ['name'],
-        //         },
-        //         {
-        //             model: Category,
-        //             attributes: ['name'],
-        //         },
-        //     ],
-        // });
-
-
-        // const recipes = recipeData.map((recipe) => recipe.get({ plain: true }));
-
         const postData = await Post.findAll({
             include: [
                 {
@@ -129,6 +113,24 @@ router.get('/dashboard', withAuth, async (req, res) => {
         const user = userData.get({ plain: true });
 
         res.render('dashboard', {
+            ...user,
+            logged_in: true
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+router.get('/create-post', withAuth, async (req, res) => {
+    try {
+        const userData = await User.findByPk(req.session.user_id, {
+            attributes: { exclude: ['password'] },
+            include: [{ model: Post }]
+        });
+
+        const user = userData.get({ plain: true });
+
+        res.render('create-post', {
             ...user,
             logged_in: true
         });

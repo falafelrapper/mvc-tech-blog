@@ -80,14 +80,6 @@ header {
     ;
 }
 
-#recipe-in {
-    border-radius: 0;
-}
-
-#recipe-out {
-    border-radius: 0 8px 8px 0;
-}
-
 #profile-in {
     border-radius: 0 8px 8px 0;
 }
@@ -158,8 +150,8 @@ div select {
     text-align: center;
     margin: 0.625rem 0 0.25rem 0.3rem;
     min-width: 1%;
-    max-width: 10%;
-    width: 10%;
+    max-width: 80%;
+    width: 80%;
 }
 
 form textarea,
@@ -247,24 +239,10 @@ form .form-input.form-input-squared {
     font-size: 20px;
 }
 
-.breaking-bread {
-    display: block;
-    width: 100%;
-    justify-content: center;
-    text-align: center;
-    font-family: 'Lexend';
-    background-color: var(--deepsmoke);
-    text-shadow:
-        -1px -1px 0 var(--lugia),
-        1px -1px 0 var(--lugia),
-        -1px 1px 0 var(--lugia),
-        1px 1px 0 var(--lugia);
-}
+/* post styles */
 
-/* recipe styles */
-
-.recipe-window,
-.profile-window {
+.post-window,
+.dashboard-window {
     width: 80%;
     margin-top: 50px;
     flex-direction: row;
@@ -272,7 +250,7 @@ form .form-input.form-input-squared {
     text-align: center;
 }
 
-.recipe-Creator {
+.post-Creator {
     background: var(--lugia);
     display: flex;
     flex-wrap: wrap;
@@ -287,7 +265,7 @@ form .form-input.form-input-squared {
     width: 75%;
 }
 
-.recipe-Creator div {
+.post-Creator div {
     justify-content: center;
 }
 
@@ -313,7 +291,15 @@ form .form-input.form-input-squared {
     margin: 1rem auto;
 }
 
-.recipe-descrip {
+#post-name {
+    margin-left: 10px;
+}
+
+#post-user {
+    margin-right: 10px;
+}
+
+.post-descrip {
     font-size: 20px;
     border-radius: 10px;
     border-style: solid;
@@ -324,7 +310,14 @@ form .form-input.form-input-squared {
     width: 40%;
 }
 
-.recipe-card {
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--kyogre);
+    border-radius: 7px 7px 0 0;
+}
+
+.post-card {
     font-size: 20px;
     border-radius: 10px;
     border-style: solid;
@@ -334,17 +327,17 @@ form .form-input.form-input-squared {
     padding-bottom: 10px;
 }
 
-#recipeDescription,
-#recipeIngredients,
+#postDescription,
 #instructions {
     min-width: 1%;
-    max-width: 15%;
-    width: 15%;
+    max-width: 80%;
+    width: 80%;
     min-height: 6rem;
 }
 
-.recipe-card a {
+.post-card a {
     text-decoration: none;
+    color: var(--miku);
 }
 
 /* Profile Styles */
@@ -356,6 +349,6 @@ form .form-input.form-input-squared {
 }
 
 .userHeader,
-#recipe-start {
+#post-start {
     text-align: center;
 }
