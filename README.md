@@ -73,7 +73,7 @@ THEN I am able to view posts and comments but I am prompted to log in again befo
 
 ## The Completed Challenge
 
-After completing the challenge, we should now have a functioning CMS-style blog site in which you can now make your own posts about technology and things pertaining to it. You can click to view the completed site [here](https://falafelrapper.github.io/work-day-planner/)!
+After completing the challenge, we should now have a functioning CMS-style blog site in which you can now make your own posts about technology and things pertaining to it. You can click to view the completed site [here](https://fast-brook-63532-7edb79d80522.herokuapp.com/)!
 
 ## Credits
 This refactor was completed by Zachary Roy
