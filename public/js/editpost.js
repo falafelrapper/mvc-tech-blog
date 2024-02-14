@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', async () => {
-    const postId = document.querySelector('#postId').value; // Retrieve postId from the hidden input field
+    const postId = document.querySelector('#postId').value;
     const response = await fetch(`/api/posts/${postId}`);
     const postData = await response.json();
 
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             });
 
             if (response.ok) {
-                window.location.href = `/posts/${postId}`; // Redirect to the updated post page
+                window.location.href = `/posts/${postId}`;
             } else {
                 alert('Failed to update post');
             }

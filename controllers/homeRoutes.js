@@ -27,7 +27,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-// Route for a single recipe based on id, also includes the associated user with name and id to make a link, and category
+
 router.get('/posts/:id', async (req, res) => {
     try {
         const postData = await Post.findByPk(req.params.id, {
@@ -77,7 +77,7 @@ router.get('/edit-post/:id', async (req, res) => {
         const post = postData.get({ plain: true });
 
         res.render('edit-post', {
-            postId: req.params.id, // Pass postId to the edit post template
+            postId: req.params.id,
             ...post,
             logged_in: req.session.logged_in
         });
@@ -87,8 +87,6 @@ router.get('/edit-post/:id', async (req, res) => {
 });
 
 
-// Route for a single user based on id
-// Only returns the associated recipes since the information displayed on the page is limited
 router.get('/users/:id', async (req, res) => {
     try {
         const userData = await User.findByPk(req.params.id, {
@@ -115,8 +113,7 @@ router.get('/users/:id', async (req, res) => {
     }
 });
 
-// Route for the profile of the currently logged in user
-// Requires the user to be logged in to view, withAuth will redirect the user to the login otherwise
+
 router.get('/dashboard', withAuth, async (req, res) => {
     try {
         const userData = await User.findByPk(req.session.user_id, {
@@ -159,7 +156,6 @@ router.get('/create-post', withAuth, async (req, res) => {
     }
 });
 
-// Route for the login, will redirect the user to thier profile is already logged in
 router.get('/login', (req, res) => {
     if (req.session.logged_in) {
         res.redirect('/dashboard');
@@ -169,7 +165,6 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
-// Route for the signup, will redirect the user to thier profile if already logged in
 router.get('/signup', (req, res) => {
     if (req.session.logged_in) {
         res.redirect('/dashboard');
