@@ -51,6 +51,15 @@ const delButtonHandler = async (event) => {
     }
 };
 
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('#edit-post').forEach(button => {
+        button.addEventListener('click', () => {
+            const postId = button.dataset.id;
+            
+            window.location.href = `/edit-post/${postId}`;
+        });
+    });
+});
 
 // event listener for form submission on share button click
 document.querySelector('#sharePostBtn').addEventListener('click', newFormHandler);

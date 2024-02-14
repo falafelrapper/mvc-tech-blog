@@ -1,0 +1,23 @@
+<div class="dashboard-window">
+    <h2>Edit Post</h2>
+    <div class="post-Creator">
+
+        <div class="create1">
+            <label for="postName">Title:</label>
+            <input type="text" id="postName" name="postName" value="{{name}}" required>
+        </div>
+
+        <div class="create2">
+            <label for="postDescription">Description:</label>
+            <textarea id="postDescription" name="postDescription" required>{{description}}</textarea>
+        </div>
+
+        <input type="hidden" id="postId" value="{{postId}}">
+
+        <div class="create4">
+            <button type="submit" id="editPostBtn" class="btn createpostbtn">Edit Post</button>
+        </div>
+    </div>
+</div>
+
+<script src="/js/editpost.js"></script>

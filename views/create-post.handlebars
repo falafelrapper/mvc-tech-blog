@@ -1,29 +1,25 @@
-
 <div class="dashboard-window">
 
-<h2>Create a new post!</h2>
+    <h2>Create a new post!</h2>
 
-<div class="post-Creator">
+    <div class="post-Creator">
 
-    {{!-- recipe name + prep time --}}
-    <div class="create1">
-        <label for="postName">Title:</label>
-        <input type="text" id="postName" name="postName" required>
+        <div class="create1">
+            <label for="postName">Title:</label>
+            <input type="text" id="postName" name="postName" required>
+        </div>
+
+        <div class="create2">
+
+            <label for="postDescription">Description:</label>
+            <textarea id="postDescription" name="postDescription" required></textarea>
+
+        </div>
+
+        <div class="create4">
+            <button type="submit" id="sharePostBtn" class="btn createpostbtn">Create Post</button>
+        </div>
     </div>
-
-    {{!-- recipe details --}}
-    <div class="create2">
-
-        <label for="postDescription">Description:</label>
-        <textarea id="postDescription" name="postDescription" required></textarea>
-
-    </div>
-
-    {{!-- submit button --}}
-    <div class="create4">
-        <button type="submit" id="sharePostBtn" class="btn createpostbtn">Create Post</button>
-    </div>
-</div>
 
 </div>
 

@@ -57,6 +57,36 @@ router.get('/posts/:id', async (req, res) => {
     }
 });
 
+router.put('/posts/:id', withAuth, async (req, res) => {
+    try {
+        const updatedPost = await Post.update(req.body, {
+            where: {
+                id: req.params.id,
+                user_id: req.session.user_id,
+            },
+        });
+        res.status(200).json(updatedPost);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+router.get('/edit-post/:id', async (req, res) => {
+    try {
+        const postData = await Post.findByPk(req.params.id);
+        const post = postData.get({ plain: true });
+
+        res.render('edit-post', {
+            postId: req.params.id, // Pass postId to the edit post template
+            ...post,
+            logged_in: req.session.logged_in
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+
 // Route for a single user based on id
 // Only returns the associated recipes since the information displayed on the page is limited
 router.get('/users/:id', async (req, res) => {
