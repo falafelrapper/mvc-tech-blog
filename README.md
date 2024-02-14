@@ -1,8 +1,17 @@
 # Fullstack Development Challenge 14
 
+## Table of Contents
+
+- [Welcome](#welcome-to-the-fourteenth-challenge-of-the-ucla-bootcamp)
+- [User Story](#user-story)
+- [Accceptance](#acceptance-criteria)
+- [Screenshots](#screenshots)
+- [Completed Challenge](#the-completed-challenge)
+- [Credits](#credits)
+
 ## Welcome to the fourteenth Challenge of the UCLA Bootcamp!
 
-In this challenge we were supposed to rework a starter code so that it would show a daily work planner in which you could set notes for each time slot. Depending on the time, each time slot would show a color for a "past", "present", and "future" state, corresponding with grey, red, and green. To start, we should follow our user story on what we want to solve:
+In this challenge we were supposed to make a tech blog that uses the MVC paradigm. You should be able to make blog posts, comment on said blog posts, and have the ability to delete or edit your own posts. To start, we should follow our user story on what we want to solve:
 
 ## User Story
 
@@ -50,13 +59,21 @@ WHEN I am idle on the site for more than a set time
 THEN I am able to view posts and comments but I am prompted to log in again before I can add, update, or delete posts
 ```
 
+## Screenshots
+
+![alt text](./public/images/homepage.png "The Tech Blog Homepage")
+
+![alt text](./public/images/dashboard.png "Dashboard")
+
+![alt text](./public/images/login.png "Login") 
+
+![alt text](./public/images/post.png "Post Window") 
+
+![alt text](./public/images/edit-post.png "Editing Post") 
+
 ## The Completed Challenge
 
-After completing the challenge, we should now have a planner that matches the tab colors with the current time, shows the current day at the top, and allows you to save notes to your localStorage so that when you refresh, it will stay saved. You can click to view the completed site [here](https://falafelrapper.github.io/work-day-planner/)!
-
-![alt text](./assets/repo-images/site-1.jpg?raw=true "Completed Site 1")
-
-![alt text](./assets/repo-images/site-2.png?raw=true "Completed Site 2") 
+After completing the challenge, we should now have a functioning CMS-style blog site in which you can now make your own posts about technology and things pertaining to it. You can click to view the completed site [here](https://falafelrapper.github.io/work-day-planner/)!
 
 ## Credits
 This refactor was completed by Zachary Roy
