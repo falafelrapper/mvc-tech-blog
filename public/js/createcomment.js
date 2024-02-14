@@ -27,6 +27,5 @@ const newFormHandler = async (event) => {
     }
 };
 
-// event listener for form submission on share button click
 document.querySelector('#start-comment').addEventListener('click', addComment)
 document.querySelector('#create-comment').addEventListener('click', newFormHandler);

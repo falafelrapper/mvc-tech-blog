@@ -1,10 +1,5 @@
 document.addEventListener('DOMContentLoaded', async () => {
     const postId = document.querySelector('#postId').value;
-    const response = await fetch(`/api/posts/${postId}`);
-    const postData = await response.json();
-
-    document.querySelector('#postName').value = postData.name;
-    document.querySelector('#postDescription').value = postData.description;
 
     document.querySelector('#editPostBtn').addEventListener('click', async () => {
         const newName = document.querySelector('#postName').value.trim();

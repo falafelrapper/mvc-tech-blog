@@ -1,4 +1,3 @@
-// importing required modules
 const path = require('path'); // file and directory 
 const express = require('express'); // express frame work
 const session = require('express-session'); // manages user's sessions

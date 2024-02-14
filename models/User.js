@@ -8,11 +8,6 @@ class User extends Model {
   }
 }
 
-// User model with associated login information
-// Has hooks to hash the password before creating and updating
-// Updating did not end up being used
-// Also has method to check a hashed password
-
 User.init(
   {
     id: {

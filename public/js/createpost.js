@@ -3,12 +3,14 @@ const newFormHandler = async (event) => {
 
     const name = document.querySelector('#postName').value.trim();
     const description = document.querySelector('#postDescription').value.trim();
+    let date = dayjs().format('M/D/YY');
+    let time = dayjs().format('h:mm A');
 
     if (name && description) {
 
         const response = await fetch(`/api/posts`, {
             method: 'POST',
-            body: JSON.stringify({ name, description }),
+            body: JSON.stringify({ name, description, date, time }),
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -21,6 +23,5 @@ const newFormHandler = async (event) => {
         }
     }
 };
-
 
 document.querySelector('#sharePostBtn').addEventListener('click', newFormHandler);

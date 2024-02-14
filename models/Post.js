@@ -18,6 +18,12 @@ Post.init(
         description: {
             type: DataTypes.TEXT,
         },
+        date: {
+            type: DataTypes.STRING
+        },
+        time: {
+            type: DataTypes.STRING,
+        },
         user_id: {
             type: DataTypes.INTEGER,
             references: {
