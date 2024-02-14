@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-document.querySelector('#sharePostBtn').addEventListener('click', newFormHandler);
+document.querySelector('#delete-post').addEventListener('click', newFormHandler);
 
 const delBtn = document.querySelectorAll('#delete-post');
 for (let i = 0; i <delBtn.length; i++) {
