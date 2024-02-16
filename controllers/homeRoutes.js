@@ -165,15 +165,6 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
-router.get('*', (req, res) => {
-    if (req.session.logged_in) {
-        res.redirect('/');
-        return;
-    }
-
-    res.render('homepage');
-});
-
 router.get('/signup', (req, res) => {
     if (req.session.logged_in) {
         res.redirect('/dashboard');
@@ -181,6 +172,15 @@ router.get('/signup', (req, res) => {
     }
 
     res.render('signup');
+});
+
+router.get('*', (req, res) => {
+    if (req.session.logged_in) {
+        res.redirect('/');
+        return;
+    }
+
+    res.render('homepage');
 });
 
 module.exports = router;
