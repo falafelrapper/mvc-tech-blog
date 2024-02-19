@@ -8,7 +8,7 @@
   {
     "id": 2,
     "name": "James",
-    "email": "james@gmail.com",
+    "email": "james@outlook.com",
     "password": "password"
   },
   {
@@ -20,13 +20,13 @@
   {
     "id": 4,
     "name": "Mike",
-    "email": "mb@yahoo.com",
+    "email": "mb@earthlink.net",
     "password": "password"
   },
   {
     "id": 5,
     "name": "Bryan",
-    "email": "b@b.com",
+    "email": "b@bedrock.com",
     "password": "password"
   }
 ]
