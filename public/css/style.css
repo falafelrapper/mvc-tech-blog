@@ -76,6 +76,11 @@ header {
     font-family: 'Roboto', sans-serif;
 }
 
+.techblog a{
+    text-decoration: none;
+    color: var(--miku);
+}
+
 .nav-list a:hover {
     color: var(--kyogre);
     background-color: var(--miku);
