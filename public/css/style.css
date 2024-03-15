@@ -69,7 +69,7 @@ header {
     border-radius: 8px;
 }
 
-.techblog{
+.techblog {
     margin: -60px auto 0;
     text-align: center;
     color: var(--miku);
@@ -124,7 +124,7 @@ header {
 }
 
 #login-link,
-#signup-link{
+#signup-link {
     color: var(--latias);
 }
 
@@ -220,7 +220,7 @@ form .form-input.form-input-squared {
     cursor: pointer;
 }
 
-.createpostbtn{
+.createpostbtn {
     font-size: 1.5rem;
     border: solid var(--black) 2px;
 }
@@ -242,7 +242,7 @@ form .form-input.form-input-squared {
     /* text-align: center; */
 }
 
-.dashboard-window{
+.dashboard-window {
     text-align: center;
 }
 
@@ -296,11 +296,11 @@ form .form-input.form-input-squared {
     margin-right: 10px;
 }
 
-#comment-user{
+#comment-user {
     margin-left: 10px
 }
 
-.comments{
+.comments {
     text-align: center;
 }
 
@@ -322,11 +322,11 @@ form .form-input.form-input-squared {
     border-radius: 7px 7px 0 0;
 }
 
-#post-text{
+#post-text {
     margin: 5px 15px 0;
 }
 
-#comment-text{
+#comment-text {
     margin: 15px;
 }
 
@@ -340,7 +340,7 @@ form .form-input.form-input-squared {
     padding-bottom: 10px;
 }
 
-.comment-card{
+.comment-card {
     font-size: 20px;
     border-radius: 10px;
     border-style: solid;
@@ -358,7 +358,7 @@ form .form-input.form-input-squared {
     min-height: 6rem;
 }
 
-#postComment{
+#postComment {
     min-width: 1%;
     max-width: 80%;
     width: 80%;
@@ -382,21 +382,20 @@ form .form-input.form-input-squared {
     text-align: center;
 }
 
-.hidden{
+.hidden {
     display: none;
 }
 
 @media (max-width: 1024px) {
-    body:before {
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -10;
+    body {
+        background: linear-gradient(var(--kyogre) 0, var(--kyogre) 20%, var(--emerald) 60%, var(--jade) 90%);
+        background-size: 100vw 100vh;
+        margin: 0;
+        font-family: 'Chivo', sans-serif;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
         -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
         background-size: cover;
-      }
+    }
 }
