@@ -395,7 +395,5 @@ form .form-input.form-input-squared {
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position: center;
-        -webkit-background-size: cover;
-        background-size: cover;
     }
 }
