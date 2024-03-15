@@ -386,7 +386,7 @@ form .form-input.form-input-squared {
     display: none;
 }
 
-@media (hover: none) {
+@media (max-width: 1024px) {
     body:before {
         position: fixed;
         left: 0;
