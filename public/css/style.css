@@ -95,10 +95,9 @@ header {
     border-radius: 0 8px 8px 0;
 }
 
-.login a,
-.logout a {
+#login,
+#logout {
     border-radius: 8px 0 30px 8px;
-    ;
 }
 
 #logout {
@@ -304,17 +303,6 @@ form .form-input.form-input-squared {
     text-align: center;
 }
 
-/* .post-descrip {
-    font-size: 20px;
-    border-radius: 10px;
-    border-style: solid;
-    border-color: black;
-    background: linear-gradient(var(--lugia) 0, var(--deepsmoke));
-    margin: 10px auto;
-    padding-bottom: 10px;
-    width: 40%;
-} */
-
 .card-header {
     display: flex;
     justify-content: space-between;
@@ -386,11 +374,14 @@ form .form-input.form-input-squared {
     display: none;
 }
 
-@media (hover: none) {
-    html, body {
-        height: 100%;
+@media (hover:none) {
+
+    html,
+    body {
         overflow-x: hidden;
-     }
+        padding: 2vh 0;
+
+    }
 
     .bg {
         position: fixed;
@@ -401,5 +392,79 @@ form .form-input.form-input-squared {
         z-index: -1;
         background: linear-gradient(var(--kyogre) 0, var(--kyogre) 20%, var(--emerald) 60%, var(--jade) 90%);
         background-size: cover;
-      }
+    }
+
+    nav {
+        display: flex;
+        background-color: var(--black);
+        color: var(--miku);
+        height: 5rem;
+        padding: 0;
+        border-radius: 0 0 30px 30px;
+        justify-content: space-between;
+        font-family: 'Chivo', sans-serif;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    .nav-list {
+        display: flex;
+    }
+
+    .nav-list a {
+        color: var(--miku);
+        font-size: 20px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+        padding: 13px;
+        border-radius: 8px;
+        align-self: flex-end;
+    }
+
+    .techblog {
+        margin: -95px auto 0;
+        text-align: center;
+        color: var(--miku);
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .post-Creator,
+    .comment-Creator {
+        background: var(--lugia);
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: 20px;
+        border-radius: 10px;
+        border-style: solid;
+        border-color: black;
+        margin: 10px auto;
+        padding-bottom: 10px;
+        width: 70vw;
+    }
+
+    .create2 textarea {
+        margin-right: 5px;
+    }
+
+    .card-header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-header h3 {
+        font-size: 1.5rem;
+        margin: 0.5rem 1rem 0;
+    }
+
+    .card-header p {
+        font-size: 1rem;
+        margin: 0.5rem .7rem;
+    }
 }
