@@ -378,9 +378,9 @@ form .form-input.form-input-squared {
 
     html,
     body {
+        height: 100%;
         overflow-x: hidden;
         padding: 2vh 0;
-
     }
 
     .bg {
